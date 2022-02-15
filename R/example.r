@@ -3,9 +3,13 @@ rm(list = ls())
 library(dplyr)
 source("SeebSkan_maps.R")
 #Confuguration
+# Path to file that has to be tidy-up
 F_NAME = "testing/2.12.21 ASPS01_2x2co015_stat5_pom2.csv"
-#Code
 
+# How many masures the SeebSkan did at one point
+N = 5
+
+#Code -------------- no need to modify at basic cases
 header = read.csv(file = F_NAME, header = T, nrows = 1)
 names(header)[12] = 'Alpha'
 
@@ -18,7 +22,6 @@ names(mm) <- names(header)
 mm = mm[0:(nrow(mm)-1),]
 output = summarize_table(mm)
 
-N = 5
 for (i in 1:(nrow(mm)/N)){
   tmp = summarize_table(mm[(5*(i-1)+1):(5*(i-1)+N),])
   output = rbind(output,tmp)
