@@ -62,7 +62,7 @@ SSMapGenerate <- function(path, n=5, csv = F,plots = F, plots.interpolate = F) {
       geom_raster(aes(fill = Alpha), interpolate=plots.interpolate) +
       scale_fill_gradient2(low="black", mid="pink", high="red", 
                            midpoint=mean(outputP$Alpha), limits=range(outputP$Alpha)) +
-      coord_equal()
+                           coord_equal()
     
     dir.create(path = RPT_NAME)
     ggsave(filename = paste(RPT_NAME,'SS_Preview.jpg',sep = ''),device = 'jpg', width = 10, height = 10, units = 'cm')
