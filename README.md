@@ -3,7 +3,12 @@ Requirements:
 1. CRAN R (tested: R version 4.1.2 (2021-11-01))
 2. RStudio
 
-## Seebeck tools for analysis
+# Automated filtering
+1. place SeebSkan-structire csv files in the ``` R/results/ ``` directory
+2. Run the ``` AutoResults.R ``` script
+3. Smile please
+
+## Seebeck tools for analysis - More detailed appr
 A simple script for SeebSkan is provided in a function form.
 
 ```
